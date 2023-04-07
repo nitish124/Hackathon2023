@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#000000">
+    <title>TotalEnergies EV platform</title>
+    <meta name="description" content="Electric Mobility platform">
+    <meta name="keywords" content="EV, mobile app, totalenergies, charging_point" />
+    <link rel="icon" type="image/png" href="assets/img/sample/photo/TotalEnergies_logo.svg.png" sizes="32x32">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/sample/photo/TotalEnergies_logo.svg.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="manifest" href="__manifest.json">
+    <script async defer src=https://maps.googleapis.com/maps/api/js?key=AIzaSyC8DNqvBXctOfyR4bwCLymk8-WDHY-kjXk&callback=initMap></script>
+    <style>
+        /* Set the size of the div element that will contain the map */
+        #map {
+          height: 470px;
+          width: 100%;
+        }
+      </style>
+    
+</head>
+
+<body>
+
+    <!-- loader -->
+    <div id="loader">
+        <div class="spinner-border text-primary" role="status"></div>
+    </div>
+    <!-- * loader -->
+
+    <!-- App Header -->
+    <div class="appHeader bg-primary text-light">
+        <div class="left">
+            <a href="#" class="headerButton goBack">
+                <ion-icon name="chevron-back-outline"></ion-icon>
+            </a>
+        </div>
+        <div class="pageTitle">Map</div>
+        <div class="right"></div>
+    </div>
+    <!-- * App Header -->
+
+    <!-- App Capsule -->
+    <div id="appCapsule" class="full-height">
+        <div class="section mt-3 mb-3">
+            <div class="card">
+                <div id="map" data-lat="-20.23255144034348" data-lng="57.52348545357936"></div>
+                <div class="card-body">
+                    <h6 class="card-subtitle">Point de recharge le plus proche</h6>
+                    <h5 class="card-title">Selectionné un borne de recharge</h5>
+                    <p class="card-text">
+                        Possibilité de rechercher et de réserver des bornes de recharge disponibles sur la plateforme en fonction de leur emplacement, de leurs besoins de charge, de leurs préférences et de leurs dates de réservation.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="section full mt-2">
+            <div id="map" data-lat="-20.23255144034348" data-lng="57.52348545357936"></div>
+
+        </div>
+
+
+
+    </div>
+    <!-- * App Capsule -->
+
+    <!-- App Bottom Menu -->
+    <div class="appBottomMenu">
+        <a href="home.html" class="item active">
+            <div class="col">
+                <ion-icon name="home-outline"></ion-icon>
+            </div>
+        </a>
+        <a href="app-components.html" class="item">
+            <div class="col">
+                <ion-icon name="cube-outline"></ion-icon>
+            </div>
+        </a>
+        <a href="ev-borne-search-form.html" class="item">
+            <div class="col">
+                <div class="action-button large">
+                    <ion-icon name="add-outline"></ion-icon>
+                </div>
+            </div>
+        </a>
+        <a href="app-pages.html" class="item">
+            <div class="col">
+                <ion-icon name="layers-outline"></ion-icon>
+            </div>
+        </a>
+        <a href="#sidebarPanel" class="item" data-bs-toggle="offcanvas">
+            <div class="col">
+                <ion-icon name="menu-outline"></ion-icon>
+            </div>
+        </a>
+    </div>
+    <!-- * App Bottom Menu -->
+
+    <!-- App Sidebar -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebarPanel">
+        <div class="offcanvas-body">
+            <!-- profile box -->
+            <div class="profileBox">
+                <div class="image-wrapper">
+                    <img src="assets/img/sample/avatar/avatar1.jpg" alt="image" class="imaged rounded">
+                </div>
+                <div class="in">
+                    <strong>Ludovic Martingale</strong>
+                    <div class="text-muted">
+                        <ion-icon name="location"></ion-icon>
+                        Maurice
+                    </div>
+                </div>
+                <a href="#" class="close-sidebar-button" data-bs-dismiss="offcanvas">
+                    <ion-icon name="close"></ion-icon>
+                </a>
+            </div>
+            <!-- * profile box -->
+
+            <ul class="listview flush transparent no-line image-listview mt-2">
+                <li>
+                    <a href="home.html" class="item">
+                        <div class="icon-box bg-primary">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </div>
+                        <div class="in">
+                            Discover
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="page-chat.html" class="item">
+                        <div class="icon-box bg-primary">
+                            <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+                        </div>
+                        <div class="in">
+                            <div>Chat</div>
+                            <span class="badge badge-danger">5</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <div class="item">
+                        <div class="icon-box bg-primary">
+                            <ion-icon name="moon-outline"></ion-icon>
+                        </div>
+                        <div class="in">
+                            <div>Dark Mode</div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input dark-mode-switch" type="checkbox" id="darkmodesidebar">
+                                <label class="form-check-label" for="darkmodesidebar"></label>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- sidebar buttons -->
+        <div class="sidebar-buttons">
+            <a href="#" class="button">
+                <ion-icon name="person-outline"></ion-icon>
+            </a>
+            <a href="#" class="button">
+                <ion-icon name="archive-outline"></ion-icon>
+            </a>
+            <a href="#" class="button">
+                <ion-icon name="settings-outline"></ion-icon>
+            </a>
+            <a href="#" class="button">
+                <ion-icon name="log-out-outline"></ion-icon>
+            </a>
+        </div>
+        <!-- * sidebar buttons -->
+    </div>
+    <!-- * App Sidebar -->
+
+    <!-- ============== Js Files ==============  -->
+    <script>
+        function initMap() {
+        
+        const mapElement = document.getElementById("map");
+const lat = parseFloat(mapElement.getAttribute("data-lat"));
+const lng = parseFloat(mapElement.getAttribute("data-lng"));
+const myLatLng = { lat: lat, lng: lng };
+
+const map = new google.maps.Map(document.getElementById("map"), {
+zoom: 10,
+center: myLatLng,
+});
+
+// Custom image for the marker icon
+const customIcon = {
+url: 'assets/img/icon/ElectricChager.png',
+scaledSize: new google.maps.Size(32, 32),
+};
+const marker = new google.maps.Marker({
+position: myLatLng,
+map: map,
+title: "Hello World!",
+ icon: customIcon,
+});
+//Add a click event listener to the map
+map.addListener("click", (event) => {
+const clickedLatLng = event.latLng;
+const lat = clickedLatLng.lat();
+const lng = clickedLatLng.lng();
+console.log("Latitude:", lat, "Longitude:", lng);
+// Create a new marker with the custom image at the clicked location
+const marker = new google.maps.Marker({
+position: { lat: lat, lng: lng },
+map: map,
+icon: customIcon,
+});
+            // Add a click event listener to the marker
+marker.addListener("click", () => {
+// Remove the marker from the map
+marker.setMap(null);
+});
+});
+
+
+}
+
+        </script>
+    
+    <!-- Bootstrap -->
+    <script src="assets/js/lib/bootstrap.min.js"></script>
+    <!-- Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- Splide -->
+    <script src="assets/js/plugins/splide/splide.min.js"></script>
+    <!-- ProgressBar js -->
+    <script src="assets/js/plugins/progressbar-js/progressbar.min.js"></script>
+    <!-- Base Js File -->
+    <script src="assets/js/base.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8DNqvBXctOfyR4bwCLymk8-WDHY-kjXk&callback=initMap" async defer></script>
+    
+    
+
+</body>
+
+</html>

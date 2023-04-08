@@ -211,6 +211,14 @@ center: myLatLng,
     { lat: -20.323773486412854, lng: 57.37983141490768, title: "Tamarin \n Spa Boutique", imageUrl: "assets/img/icon/ElectricChager.png" },
     { lat: -20.48007535680609, lng: 57.55393185067872, title: "Riviere des Anguille \n Winners", imageUrl: "assets/img/icon/ElectricChager.png" },
     { lat: -20.305569241715343, lng: 57.68873017801791, title: "Domaine Etoile\n Adventure park", imageUrl: "assets/img/icon/ElectricChager.png" },
+    { lat: -20.311780583567423, lng: 57.524647849053395, title: "Garage Curepipe\n Battery Servicing \n Contact: 58182130", imageUrl: "assets/img/icon/CarRepair.png" },
+    { lat: -20.062117887192116, lng: 57.568254068795284, title: "Garage Triolet\n Battery Servicing \n Contact: 58192130", imageUrl: "assets/img/icon/CarRepair.png" },
+    { lat: -20.17875706585659, lng: 57.664127205607635, title: "Garage Bon Acceuil\n Battery Servicing \n Contact: 58186630", imageUrl: "assets/img/icon/CarRepair.png" },
+    { lat: -20.370613401122256, lng: 57.380597184838585, title: "Garage Riviere Noire\n Battery Servicing \n Contact: 58168130", imageUrl: "assets/img/icon/CarRepair.png" },
+    { lat: -20.450331277913953, lng: 57.6485420392839, title: "Garage Trois Boutiques\n Battery Servicing \n Contact: 57182130", imageUrl: "assets/img/icon/CarRepair.png" },
+    { lat: -20.2911179662319, lng: 57.678949317544934, title: "Garage Sebastopol\n Battery Servicing \n Contact: 58102130", imageUrl: "assets/img/icon/CarRepair.png" },
+    { lat: -20.138454050130072, lng: 57.52700775504406, title: "Garage Terre Rouge\n Battery Servicing \n Contact: 57672130", imageUrl: "assets/img/icon/CarRepair.png" },
+    { lat: -20.495063632294492, lng: 57.46527947456713, title: "Garage Chemin Grenier\n Battery Servicing \n Contact: 53260130", imageUrl: "assets/img/icon/CarRepair.png" },
   ];
 
   // Loop through the locations array and add markers to the map
@@ -220,7 +228,7 @@ center: myLatLng,
       position: new google.maps.LatLng(location.lat, location.lng),
       map: map,
       title: location.title,
-      icon: location.imageUrl,
+      icon: location.imageUrl
     });
 
     // Create an InfoWindow with the multiline title and image

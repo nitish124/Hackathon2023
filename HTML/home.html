@@ -70,10 +70,10 @@
             <div class="card">
                 <img src="assets/img/sample/photo/orientation-smartphone_23-2147501974.png" class="" alt="image">
                 <div class="card-body">
-                    <h6 class="card-subtitle">Discover</h6>
+                    <h6 class="card-subtitle">Découvrir</h6>
                     <h5 class="card-title">Trouver une borne de recharge</h5>
                     <p class="card-text">
-                        Reusable components designed for the mobile interface and ready to use.
+                        Chercher une borne qui correspond à vos besoins
                     </p>
                     <a href="google-map.html" class="btn btn-primary">
                         <ion-icon name="Map"></ion-icon>
@@ -87,10 +87,10 @@
             <div class="card">
                 <img src="assets/img/sample/photo/mauvais-concept-revision-illustre_23-2148973701.webp" class="card-img-top" alt="image">
                 <div class="card-body">
-                    <h6 class="card-subtitle">Discover</h6>
-                    <h5 class="card-title">Note d'avis</h5>
+                    <h6 class="card-subtitle">Découvrir</h6>
+                    <h5 class="card-title">Votre avis</h5>
                     <p class="card-text">
-                        Pour garantir la confiance et la transparence,laisser des avis sur la qualité et la convivialité des bornes de recharge de TotalEnergies.
+                        Pour améliorer nos services, merci de laisser vos avis sur la qualité et la convivialité des bornes de recharge de TotalEnergies.
                     </p>
                     <a href="app-pages.html" class="btn btn-primary">
                         <ion-icon name="star"></ion-icon>
@@ -107,8 +107,8 @@
             <div class="footer-title">
                 Copyright © TotalEnergies <span class="yearNow"></span>. All Rights Reserved.
             </div>
-            <div>Une plateforme de location de bornes de recharge avec TotalEnergies qui offre une solution pratique pour promouvoir et rentabiliser les bornes de recharge</div>
-
+            
+            <div>Une plateforme de localisation et de réservation de bornes de recharge avec TotalEnergies qui offre une solution pratique pour promouvoir et rentabiliser les bornes de recharge</div>
         </div>
         <!-- * app footer -->
 
@@ -157,7 +157,7 @@
                     <img src="assets/img/sample/avatar/avatar1.jpg" alt="image" class="imaged rounded">
                 </div>
                 <div class="in">
-                    <strong>Ludovic Martingale</strong>
+                    <div id="usernameInfo" style="color:white"> </div>
                     <div class="text-muted">
                         <ion-icon name="location"></ion-icon>
                         Maurice
@@ -176,7 +176,7 @@
                             <ion-icon name="home-outline"></ion-icon>
                         </div>
                         <div class="in">
-                            Discover
+                            Découvrir
                         </div>
                     </a>
                 </li>
@@ -233,8 +233,8 @@
             <div class="notification-header">
                 <div class="in">
                     <img src="assets/img/sample/photo/TotalEnergies_logo.svg.png" alt="image" class="imaged w24">
-                    <strong>TotalEnergies Charging Point</strong>
-                    <span>just now</span>
+                    <strong>Borne de recharge TotalEnergies</strong>
+                    <span>à l'instant</span>
                 </div>
                 <a href="#" class="close-button">
                     <ion-icon name="close"></ion-icon>
@@ -242,11 +242,11 @@
             </div>
             <div class="notification-content">
                 <div class="in">
-                    <h3 class="subtitle">Charging point Confirmation</h3>
+                    <h3 class="subtitle">Confirmation de votre réservation</h3>
                     <div class="text">
-                        We would to confirm you that your reservation for the Charging point #4 has been approved.
+                        Votre réservation de la borne de recharge #4 a été approuvée.
                         <br>
-                        TotalEnergies Mapou
+                        TotalEnergies St Pierre
                     </div>
                 </div>
             </div>
@@ -276,6 +276,7 @@
         window.onload = function() {
             console.log(localStorage.getItem("UserName"))
             document.getElementById("welcomeName").innerHTML = localStorage.getItem("UserName");
+            document.getElementById("usernameInfo").innerHTML = localStorage.getItem("UserName");
         }
         
     </script>

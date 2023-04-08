@@ -1083,8 +1083,7 @@ button.addEventListener('click', (event) => {
                 throw new Error('Invalid User')
             }
             localStorage.setItem('UserName', data.user.userName);
-            localStorage.setItem('UserId', data.user.Id);
-            console.log("I am here false");
+            localStorage.setItem('UserId', data.user.id);
             window.location.href = '../HTML/home.html';
         })
         .catch(error => {

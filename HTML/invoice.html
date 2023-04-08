@@ -32,7 +32,7 @@
                 <ion-icon name="chevron-back-outline"></ion-icon>
             </a>
         </div>
-        <div class="pageTitle">Invoice</div>
+        <div class="pageTitle">Facture</div>
         <div class="right">
             <a href="#" class="headerButton">
                 <ion-icon name="print-outline"></ion-icon>
@@ -56,11 +56,11 @@
                     <div class="invoice-logo">
                         <img src="assets/img/sample/photo/TotalEnergies_logo.svg.png" alt="logo">
                     </div>
-                    <div class="invoice-id">#INVOICE34039</div>
+                    <div class="invoice-id">#FACTURE34039</div>
                 </div>
                 <div class="invoice-person mt-4">
                     <div class="invoice-to">
-                        <h4>Ludovic Martingale</h4>
+                        <h4><div id="usernameInfo" style="color:white"> </div></h4>
                         <p>lvm@mail.com</p>
                         <p>La Caverne<br> VACOAS</p>
                     </div>
@@ -75,10 +75,10 @@
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <td>DESCRIPTION</td>
-                                    <td>RATE/hr</td>
-                                    <td>Hours</td>
-                                    <td>SUBTOTAL</td>
+                                    <td>Description</td>
+                                    <td>Taux/hr</td>
+                                    <td>Heures</td>
+                                    <td>Total</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -95,20 +95,20 @@
 
                 <div class="invoice-signature mt-4">
                     <div class="signature-block">
-                        Signature Here
+                        Votre signature ici
                     </div>
                 </div>
 
                 <div class="invoice-total mt-4">
                     <ul class="listview transparent simple-listview">
-                        <li>Subtotal <span class="hightext">RS 700.00</span></li>
+                        <li>Total <span class="hightext">RS 700.00</span></li>
                         <li>Tax (15%)<span class="hightext">RS 105</span></li>
-                        <li>Total<span class="totaltext text-primary">RS 805</span></li>
+                        <li>Total TTC<span class="totaltext text-primary">RS 805</span></li>
                     </ul>
                 </div>
 
                 <div class="invoice-bottom">
-                    This is a computer generated invoice.
+                    Cette facture est généré automatiquement par un ordinateur.
                 </div>
             </div>
         </div>
@@ -206,7 +206,12 @@
     <script src="assets/js/plugins/progressbar-js/progressbar.min.js"></script>
     <!-- Base Js File -->
     <script src="assets/js/base.js"></script>
-
+<script>
+    window.onload = function() {
+            console.log(localStorage.getItem("UserName"))
+            document.getElementById("usernameInfo").innerHTML = localStorage.getItem("UserName");
+        }
+</script>
 </body>
 
 </html>

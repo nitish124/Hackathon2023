@@ -6,6 +6,7 @@
   <body>
     <video id="video" width="640" height="480" autoplay></video>
     <canvas id="canvas" style="display: none;"></canvas>
+	    <script src="qr-scanner.min.js"></script>
     <div id="decoded-text"></div>
     <script>
       navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } })

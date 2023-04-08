@@ -32,7 +32,7 @@
                 <ion-icon name="chevron-back-outline"></ion-icon>
             </a>
         </div>
-        <div class="pageTitle">Reserver Une Borne</div>
+        <div class="pageTitle">Réserver une borne</div>
         <div class="right"></div>
     </div>
     <!-- * App Header -->
@@ -41,7 +41,7 @@
     <div id="appCapsule">
 
         <div class="section full mt-2 mb-2">
-            <div class="section-title">Reserver Une Borne</div>
+            <div class="section-title">Réserver une borne</div>
             <div class="wide-block pt-2 pb-3">
 
                 <form class="needs-validation" novalidate>
@@ -51,8 +51,8 @@
                             <div class="input-wrapper">
                                 <label class="label" for="endroit">Endroit</label>
                                 <select class="form-control form-select" id="endroit">
-                                    <option value="0">Selecté une endroit</option>
-                                    <option value="1">Tribeca</option>
+                                    <option value="0">Sélectionner un endroit</option>
+                                    <option value="1">Tribecca</option>
                                     <option value="2">TotalEnergies Mapou</option>
                                     <option value="3">TotalEnergies Tamarin</option>
                                     <option value="4">TotalEnergies Flic-en-Flac</option>
@@ -64,34 +64,34 @@
                         </div>
                         <div class="form-group basic">
                             <div class="input-wrapper">
-                                <label class="label" for="bornetype">Type de Borne</label>
+                                <label class="label" for="bornetype">Type de borne</label>
                                 <select class="form-control form-select" id="bornetype">
-                                    <option value="0">Selecté une type de borne</option>
+                                    <option value="0">Sélectionner un type de borne</option>
                                     <option value="1">AC 50</option>
                                     <option value="2">DC 50</option>
                                 </select>
-                                <div class="valid-feedback">Looks good!</div>
-                                <div class="invalid-feedback">Merci de mentionné votre type de borne.</div>
+                                <div class="valid-feedback">Merci pour votre avis!</div>
+                                <div class="invalid-feedback">N'oubliez pas de mentionner votre type de borne.</div>
                             </div>
                         </div>
                         <div class="form-group basic">
                             <div class="input-wrapper">
-                                <label class="label" for="borneconnector">Type de Connecteur</label>
+                                <label class="label" for="borneconnector">Type de connecteur</label>
                                 <select class="form-control form-select" id="borneconnector">
-                                    <option value="0">Selecté une type de connecteur</option>
+                                    <option value="0">Sélectionner une type de connecteur</option>
                                     <option value="1">Type 2</option>
                                     <option value="2">Type 3</option>
                                     <option value="3">Type 3c</option>
                                 </select>
-                                <div class="valid-feedback">Looks good!</div>
-                                <div class="invalid-feedback">Merci de mentionné votre type de connecteur.</div>
+                                <div class="valid-feedback">Merci pour votre avis!</div>
+                                <div class="invalid-feedback">N'oubliez pas de mentionner votre type de connecteur.</div>
                             </div>
                         </div>
                         <div class="form-group basic">
                             <div class="input-wrapper">
-                                <label class="label" for="chargetime">Temps de Chargement</label>
+                                <label class="label" for="chargetime">Temps de chargement</label>
                                 <select class="form-control form-select" id="chargetime">
-                                    <option value="0">Selectionné votre temps de chargement</option>
+                                    <option value="0">Selectionner votre temps de chargement</option>
                                     <option value="1">30 mins</option>
                                     <option value="2">1 hr</option>
                                     <option value="3">1 hr 30 mins</option>
@@ -100,14 +100,14 @@
                                     <option value="6">3 hrs</option>
                                     <option value="7">3 hrs 30 mins</option>
                                 </select>
-                                <div class="valid-feedback">Looks good!</div>
-                                <div class="invalid-feedback">Merci de mentionné votre temps de chargement.</div>
+                                <div class="valid-feedback">Merci pour votre avis!</div>
+                                <div class="invalid-feedback">Merci de mentionner votre temps de chargement.</div>
                             </div>
                         </div>
                     </div>
 
                     <div class="mt-2">
-                        <a href="checkout.html" class="btn btn-primary btn-block" type="submit">Submit</a>
+                        <a href="checkout.html" class="btn btn-primary btn-block" type="submit">Soumettre</a>
                     </div>
 
                 </form>
@@ -160,7 +160,7 @@
                     <img src="assets/img/sample/avatar/avatar1.jpg" alt="image" class="imaged rounded">
                 </div>
                 <div class="in">
-                    <strong>Ludovic Martingale</strong>
+                    <div id="usernameInfo" style="color:white"> </div>
                     <div class="text-muted">
                         <ion-icon name="location"></ion-icon>
                         Maurice
@@ -242,6 +242,10 @@
     <script src="assets/js/base.js"></script>
 
     <script>
+           window.onload = function() {
+            console.log(localStorage.getItem("UserName"))
+            document.getElementById("usernameInfo").innerHTML = localStorage.getItem("UserName");
+        }
         // Example starter JavaScript for disabling form submissions if there are invalid fields
         (function () {
             'use strict';

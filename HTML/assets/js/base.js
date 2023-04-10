@@ -1091,4 +1091,49 @@ button.addEventListener('click', (event) => {
         });
 });
 
+const register = document.querySelector('#RegisterUser'); 
+register.addEventListener('click', (event) => {
+    event.preventDefault();
+    const Username1 = document.querySelector('#Username').value;
+    const Password1 = document.querySelector('#Password').value;
+    const usertype1 = document.querySelector('#usertype').value;
+
+    console.log('OK')
+
+    const url = 'https://hackathon2023f5.azurewebsites.net/hackathon/SaveUser';
+    const payload = {
+        UserName: Username1,
+        Password: Password1,
+        UserType: usertype1,
+        mobileNumber: "59897348"
+    };
+    const options = {
+        method: 'POST',
+        body: JSON.stringify(payload),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    };
+ 
+    fetch(url, options)
+        .then(response => {
+            console.log(response)
+            if (response.ok == true) {
+                return response.json();
+            } else {
+                throw new Error('Test')
+            }
+        })
+        .then(data => {
+            console.log(data)
+            if (data.status == false) {
+                throw new Error('Invalid User')
+            }
+            window.location.href = '../HTML/home.html';
+        })
+        .catch(error => {
+            console.error(error);
+        });
+});
+
 

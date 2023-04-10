@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+/* Style the close button */
+.topright {
+  float: right;
+  cursor: pointer;
+  font-size: 28px;
+}
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+.topright:hover {color: red;}
+
+* {
+  box-sizing: border-box;
+}
+
+.columns {
+  float: left;
+  width: 33.3%;
+  padding: 8px;
+}
+
+.price {
+  list-style-type: none;
+  border: 1px solid #eee;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.price:hover {
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+.price .header {
+  background-color: #111;
+  color: white;
+  font-size: 25px;
+}
+
+.price li {
+  border-bottom: 1px solid #eee;
+  padding: 20px;
+  text-align: center;
+}
+
+.price .grey {
+  background-color: #eee;
+  font-size: 20px;
+}
+
+.button {
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+body {
+  font-family: calibri, Arial, Helvetica, sans-serif;
+}
+@media only screen and (max-width: 600px) {
+  .columns {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Welcome </button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">Pricing</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">EV information</button>
+  <button class="tablinks" onclick="openCity(event, 'Login')">Login</button>
+</div>
+
+<div id="London" class="tabcontent">
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 4</div>
+  <img src="img/Quartz.jpg" style="width:100%;height:200px">
+  <div class="text">TotalEnergies Lubrifiants Launches RobotQuartz </div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 4</div>
+  <img src="img/Swan.jpg" style="width:100%;height:200px">
+  <div class="text">Swan Award Winner</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 4</div>
+  <img src="img/Casela.jpg" style="width:100%;height:200px">
+  <div class="text">Enjoy with Family</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4 / 4</div>
+  <img src="img/SuperU.jpg" style="width:100%;height:200px">
+  <div class="text">Best Price (gros gros Cadie)</div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>
+  <span class="dot"></span> 
+</div>
+</div>
+
+<div id="Paris" class="tabcontent">
+<div>
+	<h3 style="text-align:center">Pricing Tables for the Merchant</h3>
+
+	<div class="columns">
+	  <ul class="price">
+		<li class="header">Free</li>
+		<li class="grey">Find EV Charging</li>
+		<li>Up to 5 charging station requests</li>
+		<li>limited reservation</li>
+		<li> Fixed Rate per transaction fee </li>
+		<li> N/A </li>
+		<li class="grey"><a href="#" class="button">Sign Up</a></li>
+	  </ul>
+	</div>
+
+	<div class="columns">
+	  <ul class="price">
+		<li class="header" style="background-color:#04AA6D">Basic</li>
+		<li class="grey">Rs 500 / month</li>
+		<li>Up to 20 charging station requests</li>
+		<li>Unlimited number of reservation</li>
+		<li> Fixed Rate per transaction fee</li>
+		<li>Marketing and Banners</li>
+		<li class="grey"><a href="#" class="button">Sign Up</a></li>
+	  </ul>
+	</div>
+
+	<div class="columns">
+	  <ul class="price">
+		<li class="header">Premium</li>
+		<li class="grey">Rs. 1000 / month</li>
+		<li>Unlimited charging station requests</li>
+		<li>Unlimited number of reservation</li>
+		<li>Preferential Rate per transaction fees</li>
+		<li>Marketing and Banners</li>
+		<li class="grey"><a href="#" class="button">Sign Up</a></li>
+	  </ul>
+	</div>
+</div>
+</div>
+
+<div id="Tokyo" class="tabcontent">
+  <h3 style="text-align:center">Your all-in-one EV charging provider</h3>
+  <img src="img/information.jpg" width="100%" height="250px" alt="" loading="lazy">
+  <br/><br/>
+  <img src="img/information2.png" width="100%" height="400px" alt="" loading="lazy">
+</div>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 1000); // Change image every 2 seconds
+}
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  if (cityName == "Login"){
+    window.location.href = "HTML/page-login.html";
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 
